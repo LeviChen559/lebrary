@@ -62,7 +62,7 @@ export default function BooksID() {
     }
   },[id])
   if (data===null){
-    return <div> 404 Can't find the book. </div>
+    return <div> 404 Can not find the book. </div>
   }
   return (
     <Wrapper>

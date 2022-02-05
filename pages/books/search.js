@@ -122,12 +122,12 @@ export default function Search() {
         const res = await ax.get("/api/books_search",{
           params:{
             txt:txt,
-            lan: code_method[code].label,
+            lan: code_method[code]?.label,
             person:person,
             rc:rc,
             trc:trc,
             sort_rating:sbr,
-            sort_type:order_method[order].label
+            sort_type:order_method[order]?.label
           }
         })
         // console.log(typeof(order_method[order].label))
@@ -148,10 +148,10 @@ export default function Search() {
         console.log("async call!!!")
         const res = await ax.get("/api/books_search",{
           params:{
-            lan: code_method[code].label,
+            lan: code_method[code]?.label,
             person:person,
             sort_rating:sbr,
-            sort_type:order_method[order].label
+            sort_type:order_method[order]?.label
           }
         })
         console.log(res.data);
